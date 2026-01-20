@@ -12,7 +12,7 @@ const variants = {
 export class Heroicons extends IconSet<typeof variants> {
   constructor(variant = "default") {
     if (variant in variants) {
-      super("heroicons", variants, variant as keyof typeof variants);
+      super("Heroicons", "heroicons", variants, variant as keyof typeof variants);
     } else {
       throw new UnknownIconVariantError(variant);
     }

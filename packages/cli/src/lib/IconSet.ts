@@ -6,6 +6,7 @@ import { existsSync, readdirSync, readFileSync } from "fs";
 import { UnknownIconVariantError } from "./errors";
 
 export abstract class IconSet<TVariants extends Record<string, string> = { default: string }> {
+  name: string;
   packageDirectory: string;
   iconNames: Array<string> = [];
   tagNames: Array<string> = [];
@@ -15,7 +16,8 @@ export abstract class IconSet<TVariants extends Record<string, string> = { defau
 
   abstract loadTags(): void;
 
-  constructor(packageName: string, variants: TVariants, variant: keyof TVariants & string) {
+  constructor(name: string, packageName: string, variants: TVariants, variant: keyof TVariants & string) {
+    this.name = name;
     this.variants = variants;
     this.variant = variant;
     this.packageDirectory = this.resolvePackageDirectory(packageName);

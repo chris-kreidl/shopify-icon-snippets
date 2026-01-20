@@ -12,7 +12,7 @@ const variants = {
 
 export class Lucide extends IconSet<typeof variants> {
   constructor() {
-    super("lucide-static", variants, "default");
+    super("Lucide", "lucide-static", variants, "default");
   }
 
   override supportsTags(): boolean {
