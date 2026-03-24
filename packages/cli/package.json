@@ -38,7 +38,7 @@
     "consola": "^3.4.2",
     "destr": "^2.0.5",
     "heroicons": "^2.2.0",
-    "lucide-static": "^0.563.0",
+    "lucide-static": "^1.0.1",
     "radashi": "^12.7.1"
   },
   "devDependencies": {
